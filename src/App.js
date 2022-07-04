@@ -22,11 +22,9 @@ function App() {
   
   useEffect(() =>{
     dispatch(getCartItems())
+    dispatch(getCocktails())
    },[])
 
-   useEffect(() =>{
-     dispatch(getCocktails())
-   },[])
 
    if(isLoading) {
     return <div className="loading">
