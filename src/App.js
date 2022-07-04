@@ -17,13 +17,13 @@ function App() {
 
    useEffect(() =>{
     dispatch(calculateTotals())
-  }, [cartItems])
+  }, [cartItems]) // eslint-disable-line react-hooks/exhaustive-deps
   
   
   useEffect(() =>{
     dispatch(getCartItems())
     dispatch(getCocktails())
-   },[])
+   },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
    if(isLoading) {
